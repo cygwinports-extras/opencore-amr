@@ -1,5 +1,5 @@
 category: Audio
-requires: libgcc1
+requires:
 external-source: opencore-amr
 sdesc: "Adaptive Multi Rate - Wideband (AMR-WB) codec (runtime)"
 ldesc: "This library contains an implementation of the 3GPP TS 26.073
