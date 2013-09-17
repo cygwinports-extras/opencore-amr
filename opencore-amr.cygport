@@ -1,0 +1,28 @@
+NAME="opencore-amr"
+VERSION=0.1.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Adaptive Multi Rate (AMR-NB/AMR-WB) codecs"
+DESCRIPTION="This library contains an implementation of the 3GPP TS 26.073
+specification for the Adaptive Multi Rate (AMR) speech codec and an
+implementation for the 3GPP TS 26.173 specification for the Adaptive
+Multi-Rate - Wideband (AMR-WB) speech decoder. The implementation is derived
+from the OpenCORE framework, part of the Google Android project."
+HOMEPAGE="http://sourceforge.net/projects/opencore-amr/"
+SRC_URI="mirror://sourceforge/opencore-amr/${NAME}-${VERSION}.tar.gz"
+
+PKG_NAMES="lib${NAME}nb0 lib${NAME}nb-devel lib${NAME}wb0 lib${NAME}wb-devel"
+libopencore_amrnb0_SUMMARY="Adaptive Multi Rate Narrowband (AMR-NB) codec"
+libopencore_amrnb0_DOCS="ChangeLog LICENSE README"
+libopencore_amrnb0_CONTENTS="usr/bin/cygopencore-amrnb-0.dll"
+libopencore_amrnb_devel_SUMMARY=${libopencore_amrnb0_SUMMARY}
+libopencore_amrnb_devel_CONTENTS="usr/include/opencore-amrnb/ usr/lib/libopencore-amrnb.*
+                                  usr/lib/pkgconfig/opencore-amrnb.pc"
+libopencore_amrwb0_SUMMARY="Adaptive Multi Rate Wideband (AMR-WB) codec"
+libopencore_amrwb0_DOCS="ChangeLog LICENSE README"
+libopencore_amrwb0_CONTENTS="usr/bin/cygopencore-amrwb-0.dll"
+libopencore_amrwb_devel_SUMMARY=${libopencore_amrwb0_SUMMARY}
+libopencore_amrwb_devel_CONTENTS="usr/include/opencore-amrwb/ usr/lib/libopencore-amrwb.*
+                                  usr/lib/pkgconfig/opencore-amrwb.pc"
+
+KEEP_LA_FILES="none"
